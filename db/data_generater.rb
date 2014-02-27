@@ -29,14 +29,16 @@ class PazDoraClient
 			monster[:rare] = table_a.xpath("tr")[3].xpath("td")[2].inner_text.delete!(" ").size
 			monster[:name] = table_a.xpath("tr")[1].xpath("td")[1].xpath("a").inner_text
 			monster[:img] = table_a.xpath("tr/th/img")[0]["src"]
+			monster[:url] = "http://pd.appbank.net" + table_a.xpath("tr")[1].xpath("td")[1].xpath("a")[0]["href"]
 		rescue
+			puts num.to_s + " failed!"
 			monster = nil
 		end
+#		puts table_a
 		monster
 
 		# table_b =  root.xpath('//table[@class="detail b"]')
 		# table_c =  root.xpath('//table[@class="detail c"]')
-		# table = root.xpath('//table[@class="m_list"]')  #=> ruby - Google 検索
 	end
 end
 
@@ -46,15 +48,14 @@ cli = PazDoraClient.new
 
 monsters = []
 
-(1..1209).each do |index|
+(1..1250).each do |index|
 	puts index if index % 10 == 0
 	monster = cli.get_monsters(index)
 	monsters << monster if !monster.nil?
 end
 
-puts "end"
-
 open("monsters.js", "w") do |io|
 	JSON.dump(monsters, io)
 end
 
+puts "end"
