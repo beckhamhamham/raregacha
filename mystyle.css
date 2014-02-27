@@ -1,0 +1,8 @@
+	p { color: blue; }
+	h1 { color: red; font-size: 100%;}
+	h2 { color: blue; font-size: 75%;}
+	table { border: solid 1px;}
+	th { border: solid 1px;}
+	th.nametab { width: 200px;}
+	tr { border: solid 1px;}
+
