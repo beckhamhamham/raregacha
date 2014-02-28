@@ -1,20 +1,70 @@
 <!--Copyright 2014 beckhamhamham@gmail.com-->
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-<head>
-	<meta charset="utf-8">
-	<title>raregacha</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>raregacha</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.sticky-footer.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="mystyle.css">
-	<link rel="shortcut icon" href="favicon.ico">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="db/monsters.js"></script>
 	<script src="main.js"></script>
-</head>
-<body>
-	<h1>レアガチャ</h1>
-		<button id="raregacha">レアガチャ　５連続</button><br><br>
+
+  </head>
+  <body>
+  		<div id="header" class="container">	
+			<div class="logo">
+				 <img src="img/raregacha_logo.png" width="50px" height="50px">
+			</div>
+		
+		<nav class="navbar navbar-inverse">
+		  <div class="container">
+		  	<div class="navbar-header">
+		  	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		  	    <span class="sr-only">Toggle navigation</span>
+		  	    <span class="icon-bar"></span>
+		  	    <span class="icon-bar"></span>
+		  	    <span class="icon-bar"></span>
+		  	  </button>
+		  	  <span class="navbar-brand visible-xs" href="#">MENU</span>
+			</div>
+
+		  	<div class="collapse navbar-collapse">
+		  		<ul class="nav navbar-nav">
+				<li class="first" id="raregachax1" count="1"><a href="#">x1</a></li>
+				<li id="raregachax5" count="5"><a href="#">x5</a></li>
+				<li id="raregachax10" count="10"><a href="#">x10</a></li>
+				</ul>
+			</div>
+		  </div>
+		</nav>
+	</div> <!--header-->
+
+    <div class="container">
+    	<!--<button id="raregacha"><font face="Calibri">レアガチャ　5連続</font></button><br><br>-->
 		<div id="monster_view">
 		</div>
-</body>
+    </div>     <!--container-->
+	  
+	</div>
+
+	<div id="footer" style="background:gray;">
+		<div class="logo"align="right">
+			<img src="img/raregacha_logo.png" width="18px" height="18px"><font color="white" size="4pt" face="calibri">raregacha</font>
+		</div>
+		<div class="copy" align="right">
+			<span><font color="white" size="2pt" face="calibri">Copyright 2014 beckhamhamham@gmail.com</font></span>
+		</div>
+	</div>	<!--footer-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
 </html>
+
