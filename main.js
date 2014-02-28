@@ -9,15 +9,24 @@
 
 window.onload = function(){
 
-	$("#raregachax1, #raregachax5, #raregachax10").bind("click", function() {
+	$("#gachax1, #gachax5, #gachax10").bind("click", function() {
 		var count = $(this).attr("count");
-		execute(count);
+		gacha(count);
+		}
+	);
+
+	$("#gacharoulette").bind("click", function() {
+		roulette();
 		}
 	);
 }
 
+	function roulette() {
+		$("#monster_view").empty();
+		$("#monster_view").append("<font face=\"calibri\" size=5pt>under construction</font>");
+	}
 
-	function execute(count) {
+	function gacha(count) {
 
 		count = Number(count);
 
