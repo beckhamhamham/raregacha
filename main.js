@@ -1,18 +1,28 @@
 
 window.onload = function(){
 
-	$("#raregacha").bind("click", function() {
+	$("#raregachax1, #raregachax5, #raregachax10").bind("click", function() {
+		var count = $(this).attr("count");
+		execute(count);
+		}
+	);
+}
+
+
+	function execute(count) {
+
+		count = Number(count);
 
 		function setup(){
 			$("#monster_view").empty();
-			$("#monster_view").append("<table id=\"monster_table\"><th>No.</th><th class=\"nametab\">名前</th><th>イメージ</th><th>レア度</th></table>");
+			$("#monster_view").append("<table class=\"table table-bordered table-condenced\" id=\"monster_table\"><th>No.</th><th class=\"nametab\">名前</th><th>イメージ</th><th>レア度</th></table>");
 		}
 
 		function monster_show (monster) {
 			var line = $("<tr class=\"rare" + monster.rare + "\"/>");
 			line.append($("<td>" + monster.id + "</td>"));
 			line.append($("<td>" + monster.name + "</td>"));
-			line.append($("<td><a href=\"" + monster.url + "\"><img src=\"" + monster.img + "\"></a></td>"));
+			line.append($("<td><a target=\"_blank\" href=\"" + monster.url + "\"><img src=\"" + monster.img + "\" width=50px height=50px\"></a></td>"));
 			line.append($("<td>" + monster.rare + "</td>"));
 			$("#monster_table").append(line);
 
@@ -51,7 +61,7 @@ window.onload = function(){
 					console.log("lot=" + result + ", monster.id=" + monsters[result].id);
 				},  i*800);
 				i++;
-			} while (i<5);
+			} while (i<count);
 		}
 
 		console.log("start.");
@@ -60,20 +70,5 @@ window.onload = function(){
 		setup();
 		show();
 		//}, 10);
-/*
-		var limit = 20;
-		var execute = function(i) {
-			if(i<limit){
-				setTimeout(function() {
-					setup();
-					i++;
-					lot(i == limit);
-					execute(i);
-				}, 10);
-			}
-		}
 
-		execute(0);
-		*/
-	});
-}
+	}

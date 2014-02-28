@@ -1,14 +1,15 @@
-	p { color: blue; }
+	/*p { color: blue; }
 	h1 { color: red; font-size: 100%;}
 	h2 { color: blue; font-size: 75%;}
-	table { border: solid 1px;}
-	th { border: solid 1px;}
+	*/
+
 	th.nametab { width: 230px;}
-	tr { border: solid 1px;}
 	tr.rare7 { background-color: gold;}
 	tr.rare6 { background-color: gold;}
 	tr.rare5 { background-color: gold;}
 	tr.rare4 { background-color: silver;}
+
+
 
 
 
