@@ -1,3 +1,11 @@
+(function () {
+    if (typeof window.console === "undefined") {
+         window.console = {}
+    }
+    if (typeof window.console.log !== "function") {
+         window.console.log = function () {}
+    }
+})();
 
 window.onload = function(){
 
