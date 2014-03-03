@@ -3,11 +3,62 @@
 	h2 { color: blue; font-size: 75%;}
 	*/
 
+body {
+	font-family: Calibri;
+}
 	th.nametab { width: 230px;}
 	tr.rare7 { background-color: gold;}
 	tr.rare6 { background-color: gold;}
 	tr.rare5 { background-color: gold;}
 	tr.rare4 { background-color: silver;}
 
+#viewer {
+    margin: 0 auto;
+    width: 900px;
+    height: 300px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+ 
+#viewer img {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
 
+#monster_view {
+    margin: 0 auto;
+    width: 900px;
+    height: 300px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+ 
+#monster_view img {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#view-egg {
+	width: 90px;
+	z-index: 1;
+}
+
+
+.gacha-header{
+	font-size: 15pt;
+	color: red;
+}
+
+.gacha-menu{
+	font-size: 12pt;
+}
+
+.gacha-footer{
+	font-size: 10pt;
+	color: white;
+}
 
