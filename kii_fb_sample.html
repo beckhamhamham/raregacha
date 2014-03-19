@@ -1,0 +1,45 @@
+<html ng-app="fbApp">
+    <head>
+        <title>Kii Cloud facebook login sample</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script type="text/javascript" src="js/foundation.min.js"></script>
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/KiiSDKv2.1.11.js"></script>
+    </head>
+    <body ng-controller="mainCtrl" >
+        <div id="fb-root"></div>
+        <script type="text/javascript" src="js/env.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <div class="row">
+            <div class="large-12 medium-12 columns">
+                <a class="navbar-brand" href="./" ng-click="showall($event)">facebook login sample</a>
+            </div>
+        </div><!--/.navbar -->
+
+        <div class="row">
+          <div class="small-6 large-6 columns">
+              <a href="#" id="login-button" ng-click="loginWithFacebook($event)">FacebookLogin</a>
+              <span id="login-name"></span>
+          </div>
+          <div class="small-6 large-6 columns">
+            <a href="#" id="logout-button" ng-click="logout($event)">logout</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-6 large-6 columns">
+                Value: <input ng-model="text">
+                <a href="#" id="add-button" data-role="button" data-theme="b" ng-click="addValue($event)">Add data</a>
+          </div>
+          <div class="small-6 large-6 columns">
+                <a href="#" id="get-button" data-role="button" data-theme="b" ng-click="loadValues($event)">Get data</a>
+                <div ng-repeat="value in values">
+                    {{value}}
+                </div>
+          </div>
+        </div>
+</html>
